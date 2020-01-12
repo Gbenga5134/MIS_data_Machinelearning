@@ -1,0 +1,16 @@
+****Association Rule Machine Learning for the MIS 2015 Dataset from DHS*******
+library(arules)
+library(Matrix)
+library(arules)
+detach(dplyr)
+library(plyr)
+txn = read.transactions(file="C:/Users/PSU Libraries/Desktop/Data_for_analysis_in_excel.csv", rm.duplicates= TRUE, format="basket",sep=",",cols=1);
+basket_rules <- apriori(txn,parameter = list(sup = 0.01, conf = 0.5,target="rules"));
+******Association rule Machine Learning for the MIS Data from other supplementary literature sources*****
+library(arules)
+library(Matrix)
+library(arules)
+detach(dplyr)
+library(plyr)
+txn = read.transactions(file="C:/Users/PSU Libraries/Desktop/Data_Anopheles.csv", rm.duplicates= TRUE, format="basket",sep=",",cols=1);
+basket_rules <- apriori(txn,parameter = list(sup = 0.01, conf = 0.5,target="rules"));
